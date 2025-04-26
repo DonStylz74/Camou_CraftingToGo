@@ -11,7 +11,7 @@ Config.Recipes = {
         animation = {
             dict = "missheistfbisetup1",
             name = "hassle_intro_loop_f",
-            time = 5000
+            time = 8000
         }
     },
     {

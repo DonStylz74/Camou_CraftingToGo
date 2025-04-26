@@ -17,7 +17,7 @@ AddEventHandler('crafting:removeIngredients', function(recipe)
     local xPlayer = ESX.GetPlayerFromId(source)
     
     if xPlayer == nil then
-        print("Error: xPlayer konnte nicht gefunden werden (source: " .. tostring(source) .. ")")
+        print("Error: xPlayer could not be found (source: " .. tostring(source) .. ")")
         return
     end
 
@@ -37,9 +37,9 @@ AddEventHandler('crafting:removeIngredients', function(recipe)
         end
         xPlayer.addInventoryItem(recipe.result.name, recipe.result.count)
 
-        TriggerClientEvent("esx:showNotification", source, "Du hast " .. recipe.result.count .. "x " .. recipe.result.label .. " hergestellt.")
+        TriggerClientEvent("esx:showNotification", source, "You have made " .. recipe.result.count .. "x " .. recipe.result.label .. ".")
     else
-        TriggerClientEvent("esx:showNotification", source, "Du hast nicht alle notwendigen Zutaten.")
+        TriggerClientEvent("esx:showNotification", source, "You don't have all the necessary items or ingredients.")
     end
 end)
 
